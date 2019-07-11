@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ this.currentChild }}
     <div>
       {{ this.config.parent.label }}
       <select @change="changeSelect('parent')">
@@ -10,6 +11,8 @@
       </select>
     </div>
     {{ this.arrayData }}
+    {{ this.arrayData[currentChild] }}
+
     <!--<div v-for="(child, i) in this.config.parent.childs" :key="i">
       {{ child.label }}
       <select @change="changeSelect('child')">
@@ -24,6 +27,8 @@
 <script>
 import axios from "axios";
 // import Vue from "vue";
+// Vue.forceUpdate();
+
 export default {
   name: "nesterd-select",
   props: {
@@ -71,6 +76,7 @@ export default {
             // Vue.set(this.items, this.currentChild, response.data);
             console.log(this.arrayData[this.currentChild]);
             console.log(this.arrayData[this.currentChild]);
+            this.currentChild = this.currentChild + 1;
           }
         );
       } else {
