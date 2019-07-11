@@ -1,13 +1,14 @@
 {
   "name": "nested-selects",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
@@ -20,5 +21,17 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturo1930/nested-select.git"
+  },
+  "author": "Luis Arturo Munguia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arturo1930/nested-select/issues"
+  },
+  "homepage": "https://github.com/arturo1930/nested-select#readme"
 }

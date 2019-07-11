@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!--<HelloWorld msg="Welcome to Your Vue.js App" />-->
+    <NestedSelect :config="this.config" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+//import HelloWorld from "./components/HelloWorld.vue";
+import NestedSelect from "./components/nested-select.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    //HelloWorld
+    NestedSelect
+  },
+  data() {
+    return {
+      config: {
+        parent: {
+          url: "http://localhost:3000/pais",
+          label: "Pais:",
+          childs: [
+            {
+              id: 1,
+              uri: "http://localhost:3000/estado",
+              label: "Ciudad"
+            },
+            {
+              id: 2,
+              uri: "http://localhost:3000/ciudad",
+              label: "Estado",
+              return: true
+            }
+          ]
+        }
+      }
+    };
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

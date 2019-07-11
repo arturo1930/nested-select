@@ -27,3 +27,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+https://medium.com/@muzk/c%C3%B3mo-automatizar-la-subida-de-versiones-a-npm-6b0d66c633bc?
